@@ -319,4 +319,6 @@ The result could look like my dashboard (or different, depending on your sensors
 <center><img src="./assets/grafana.png" alt="Grafana Visualization" width="50%"></center>
 
 
-A (for some time available) live link to my setup can be seen on [Meshtastic Devices](http://giesecke.tk:3000/public-dashboards/2e6481c840c145f78128b2da794087a1?orgId=1&refresh=10s&from=now-3h&to=now)
+A (for some time available) live link to my setup can be seen on [Meshtastic Devices](http://giesecke.tk:3000/public-dashboards/2e6481c840c145f78128b2da794087a1?orgId=1&refresh=10s&from=now-3h&to=now)     
+Alternative link (above seems not working always) [Meshtastic Devices](
+http://45.159.220.139:3000/public-dashboards/2e6481c840c145f78128b2da794087a1?orgId=1&refresh=10s&from=now-3h&to=now)
