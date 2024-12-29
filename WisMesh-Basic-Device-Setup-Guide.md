@@ -162,8 +162,7 @@ For the WisMesh Pocket and WisMesh B1, the _**OLED_SSD1306**_ is the best select
 
 ## Setup the WiFi connection of the RAK11200
 
-⚠️ Part 1 of the setup is identical for a RAK4631 and a RAK11200. In part 2, the WiFi connection of the RAK11200 will be setup.    
-Once the WiFi connection is established, and the RAK11200 is connected to the same WiFi network as the mobile phone, the device will show up with it's WiFi connection in the mobile app!
+⚠️ Once the WiFi connection is established, and the RAK11200 is connected to the same WiFi network as the mobile phone, the device will show up with it's WiFi connection in the mobile app!
 
 ----
 
