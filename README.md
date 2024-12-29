@@ -13,6 +13,19 @@ For visualization, the InfluxDB database is connected to an Grafana instance.
 
 ----
 
+# Additional Setup Information
+
+## Basic Device Setup for Meshtastic
+
+The [WisMesh Basic Device Setup Guide](./WisMesh-Basic-Device-Setup-Guide.md) is a step by step guide to setup WisMesh Meshtastic devices for the Meshtastic Network.
+
+## WisMesh MQTT Gateway Setup
+
+The [WisMesh MQTT Gateway Setup Guide](./WisMesh-MQTT-Gateway-Setup-Guide.md) is a step by step guide to setup WisMesh Meshtastic devices as gateways from the Meshtastic Network to a MQTT broker.
+
+
+----
+
 For this PoC, we connect four meshtastic devices to each other.
 
 - [Gateway based on RAK11200](https://docs.rakwireless.com/Product-Categories/WisBlock/RAK11200/Overview/) as gateway to an MQTT broker with a [RAK13300](https://docs.rakwireless.com/Product-Categories/WisBlock/RAK13300/Overview/) for the Meshtastic connection    
