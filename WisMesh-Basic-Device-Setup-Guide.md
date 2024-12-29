@@ -1,15 +1,15 @@
-| <img src="./assets_qsg/RAK-Whirls.png" alt="RAKWireless"> | <img src="./assets_qsg/meshtastic.png" alt="Meshtastic" width=30%> | <img src="./assets_qsg/rakstar.jpg" alt="RAKstar" > |    
+| <img src="./assets_qsg/RAK-Whirls.png" alt="RAKWireless"> | <img src="./assets_qsg/meshtastic.png" alt="Meshtastic" width=30%> | <img src="./assets_qsg/RAKstar.jpg" alt="RAKstar" > |    
 | :-: | :-: | :-: |     
 
 # WisMesh Basic Device Setup Guide
 
 This guide goes step by step through the setup of a WisMesh device based on the RAKwireless RAK4631 (nRF52840), RAK11200 (ESP32) or RAK11310 (RP2040) module.    
 
-⚠️ The Meshtastic mobile app used is the Android version. The steps will be similar when using the iOS version of the application, however the UI will be looking different.
+⚠️ The Meshtastic Mobile App used is the Android version. The steps will be similar when using the iOS version of the application, however the UI will be looking different.
 
 This guide is for the basic device setup and is divided into three sections:     
-- (1) General setup of a device with the RAK4631 (nRF52840) module and the  the RAK11200 (ESP32) module with the Meshtastic mobile app over BLE
-- (2) WiFi connection setup of a device with the RAK11200 (ESP32) module with the Meshtastic mobile app over BLE and WiFi
+- (1) General setup of a device with the RAK4631 (nRF52840) module and the  the RAK11200 (ESP32) module with the Meshtastic Mobile App over BLE
+- (2) WiFi connection setup of a device with the RAK11200 (ESP32) module with the Meshtastic Mobile App over BLE and WiFi
 - (3) General setup of a device with the RAK11310 (RP2040) with the Meshtastic Web Client
 
 It covers the setup of the device to send and receive messages over the Meshtastic Network and the setup of the location acquisition module (if available).
@@ -25,11 +25,11 @@ The WisMesh-Sensor-Node-Setup goes through the steps to enable sensor data trans
 
 ### Connect the device to a mobile phone over BLE
 
-⚠️ The Meshtastic Mobile app uses BLE to communicate with the WisMesh device. To be able to use the app, your mobile phone must support BLE communication.    
+⚠️ The Meshtastic Mobile App uses BLE to communicate with the WisMesh device. To be able to use the app, your mobile phone must support BLE communication.    
 
 ----
 
-**(1) Install the Meshtastic Mobile app from [Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh) or [Apple App Store](https://apple.co/3Auysep).**
+**(1) Install the Meshtastic Mobile App from [Google Play Store](https://play.google.com/store/apps/details?id=com.geeksville.mesh) or [Apple App Store](https://apple.co/3Auysep).**
 
 ⚠️ For Android devices other options to install the application are available. Details are shown in the [Meshtastic Software](https://meshtastic.org/docs/software/) documentation.
 
@@ -133,6 +133,33 @@ Enabling _**OK to MQTT**_ MUST be set, if the device's data should be sent to a 
 
 ----
 
+#### Setup the location tracking
+If the device is equipped with a GNSS location module, it can send the devices location information over the Meshtastic Network.    
+For devices that do not have such a module, a fixed location can be setup.     
+
+The location module settings are in the _**Position**_ tab of the _**Radio Configuration**_.    
+
+<center><img src="./assets_qsg/17-android-gnss-settings.png" alt="Location settings" height="25%" ></center>      
+
+For devices with a GNSS module the default settings will work. The type of module is automatically detected by the Meshtastic firmware.    
+For devices without a GNSS module, it is possible to set a fixed position. This can help, e.g. in case a coverage map is build.    
+
+#### Check the display settings
+
+If there are artefacts visible in the OLED screen, it can be related to a wrong display setup.          
+
+<center><img src="./assets_qsg/18-android-display.png" alt="Location settings" height="25%" ></center>      
+
+In this case go to the _**Display**_ settings in the _**Radio Configuration**_ and select a different OLED driver.
+In the _**Override OLED auto-detect**_ try a different display model.    
+
+<center><img src="./assets_qsg/19-android-display-setting.png" alt="Location settings" height="25%" ></center>      
+
+For the WisMesh Pocket and WisMesh B1, the _**OLED_SSD1306**_ is the best selection.
+
+----
+----
+
 ## Setup the WiFi connection of the RAK11200
 
 ⚠️ Part 1 of the setup is identical for a RAK4631 and a RAK11200. In part 2, the WiFi connection of the RAK11200 will be setup.    
@@ -141,7 +168,7 @@ Once the WiFi connection is established, and the RAK11200 is connected to the sa
 ----
 
 ### Setup the WiFi credentials in the Radio Configuration
-Follow the steps of Part 1 to connect the RAK11200 to the Meshtastic Mobile app.    
+Follow the steps of Part 1 to connect the RAK11200 to the Meshtastic Mobile App.    
 
 Goto to the _**Radio Configuration**_.    
 To open the _**Radio Configuration**_ click on the three dots on the top right side. A menu will open, showing different options, including the _**Radio Configuration**_.      
@@ -160,7 +187,7 @@ Then enter the WiFi SSID that should be used and the WiFi PSK for this WiFi Netw
 
 ⚠️ The settings for the NTP server (Network Time Provider) are optional. You can use the default **meshtastic.pool.ntp.org** or choose one that works better for your country.
 
-Once the Meshtastic node is connected to the WiFi network, the BLE connection to the Meshtastic Mobile app is no longer available. 
+Once the Meshtastic node is connected to the WiFi network, the BLE connection to the Meshtastic Mobile App is no longer available. 
 
 # ⚠️ WARNING
 _**If you configure the device for a WiFi network that you cannot access from your phone, e.g. an isolated guest access point on your router, you cannot access the device anymore. The only way to recover the device is to do a factory reset by reflashing the Meshtastic firmware**_
@@ -183,6 +210,7 @@ Once you have the IP address, you can enter it in the _**IP Address:**_ field an
 Connect the phone to the same WiFi network and check if it is listed.     
 If this doesn't work as well, you might need to reset the device by doing a factory reset.    
 
+----
 ----
 
 ## Setup a WisMesh device with RAK11310 through the Web Client
@@ -210,21 +238,21 @@ We are using the Chrome browser and the hosted version of the Web Client in the 
 #### Open the Web Client
 In the Chrome browser, open _**`https://client.meshtastic.org/`**_ to start the Web Client. In the start screen it will show that no devices are connected.
 
-<center><img src="./assets_qsg/17-webclient-start.png" alt="Web Client starting" height="25%" ></center> 
+<center><img src="./assets_qsg/20-webclient-start.png" alt="Web Client starting" height="25%" ></center> 
 
 Click on _**New Connection**_ to setup the USB connection to the RAK11310. In the new window, select _**Serial**_ as connection method.    
 Depending on the connected devices, you will see a list of devices. Select the device that is the RAK11310.     
 
 ⚠️ It is not easy to determine the USB port the RAK11310 will use. As best practice disconnect all other devices that would show as USB port on the computer.    
 
-<center><img src="./assets_qsg/18-webclient-selected-device.png" alt="Web Client starting" height="25%" ></center> 
+<center><img src="./assets_qsg/21-webclient-selected-device.png" alt="Web Client starting" height="25%" ></center> 
 
 If the correct USB port is selected, the Web Client screen will show some first information about the device like
 - Device name
 - Battery status
 - Meshtastic firmware version
 
-<center><img src="./assets_qsg/19-webclient-start.png" alt="Web Client starting" height="25%" ></center> 
+<center><img src="./assets_qsg/22-webclient-start.png" alt="Web Client starting" height="25%" ></center> 
 
 Click on _**Config**_ to start with the configuration of the device.    
 
@@ -236,7 +264,7 @@ Click on _**Config**_ to start with the configuration of the device.
 
 The first thing to setup is the Meshtastic Region. This is done in the _**LoRa**_ tab in the Web Client.
 
-<center><img src="./assets_qsg/20-webclient-set-region.png" alt="Setup region" height="25%" ></center>  
+<center><img src="./assets_qsg/23-webclient-set-region.png" alt="Setup region" height="25%" ></center>  
 
 On a new device, it will show _**UNSET**_. On the drop-down selector you have to choose the correct Meshtastic region for your country.     
 
@@ -256,7 +284,7 @@ In the same tab, is the _**Frequency Slot**_ selection.
 
 And below is the control for the MQTT settings.
 
-<center><img src="./assets_qsg/21-webclient-set-slot.png" alt="Setup Frequency Slot" height="25%" ></center>  
+<center><img src="./assets_qsg/24-webclient-set-slot.png" alt="Setup Frequency Slot" height="25%" ></center>  
 
 **Advanced user settings**    
 If the devices messages and sensor data should be shared over a MQTT broker to the Cloud, it is important to enable _**OK to MQTT**_.    
@@ -274,7 +302,7 @@ After selecting the _**Meshtastic Region**_, the LoRa communication is preset to
 
 The default setting can be changed under _**Waveform Settings**_ in the _**Modem Preset**_
 
-<center><img src="./assets_qsg/22-webclient-preset.png" alt="Setup LoRa Configuration" height="25%" ></center>  
+<center><img src="./assets_qsg/25-webclient-preset.png" alt="Setup LoRa Configuration" height="25%" ></center>  
 
 ----
 
@@ -285,11 +313,14 @@ The default primary channel for communication is preset in the device to _**LONG
 
 ⚠️ _For most users, the default channel setting will work._     
 
-<center><img src="./assets_qsg/23-webclient-channel.png" alt="Setup region" height="25%" ></center>  
+<center><img src="./assets_qsg/26-webclient-channel.png" alt="Setup region" height="25%" ></center>  
 
 **Advanced user settings**    
 If the devices messages and sensor data should be shared over a MQTT broker to the Cloud, it is important to check _**Uplink Enable**_.    
  
+----
+----
+
 ### Appendix Use Meshtastic Python CLI to change settings
 
 ⚠️ The Web Client is not always updated to match with the latest Meshtastic firmware. E.g. in the Web Client used in this guide, the new Regions for the Philippines are missing. In case some settings are not available, the Meshtastic Python CLI can be used to change these settings.
