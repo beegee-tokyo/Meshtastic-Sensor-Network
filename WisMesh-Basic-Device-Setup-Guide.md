@@ -8,16 +8,16 @@ This guide goes step by step through the setup of a WisMesh device based on the 
 ⚠️ The Meshtastic Mobile App used is the Android version. The steps will be similar when using the iOS version of the application, however the UI will be looking different.
 
 This guide is for the basic device setup and is divided into three sections:     
-- (1) General setup of a device with the RAK4631 (nRF52840) module and the  the RAK11200 (ESP32) module with the Meshtastic Mobile App over BLE
-- (2) WiFi connection setup of a device with the RAK11200 (ESP32) module with the Meshtastic Mobile App over BLE and WiFi
-- (3) General setup of a device with the RAK11310 (RP2040) with the Meshtastic Web Client
+1) General setup of a device with the RAK4631 (nRF52840) module and the  the RAK11200 (ESP32) module with the Meshtastic Mobile App over BLE
+2) WiFi connection setup of a device with the RAK11200 (ESP32) module with the Meshtastic Mobile App over BLE and WiFi
+3) General setup of a device with the RAK11310 (RP2040) with the Meshtastic Web Client
 
 It covers the setup of the device to send and receive messages over the Meshtastic Network and the setup of the location acquisition module (if available).
 
-⚠️ A detailed extended setup guide for Meshtastic Sensors, is in the [WisMesh-Sensor-Node-Setup](./README.md) guide, which shows additional steps required to forward sensor data to a MQTT broker and visualize them in the Cloud.
+⚠️ A detailed extended setup guide for Meshtastic Sensors, is in the [WisMesh Sensor Node Setup](./README.md) guide, which shows additional steps required to forward sensor data to a MQTT broker and visualize them in the Cloud.
 The WisMesh-Sensor-Node-Setup goes through the steps to enable sensor data transmission for devices with additional sensors, like temperature, humidity, air quality and other sensors.
 
-⚠️ A detailed extended setup guide how to setup a Meshtastic device as gateway to a MQTT broker is in the [WisMesh-Gateway-Setup]() guide, which covers the setup of a Ethernet or WiFi connection to a MQTT broker to forward sensor data, device location and other information to the Cloud.
+⚠️ A detailed extended setup guide how to setup a Meshtastic device as gateway to a MQTT broker is in the [WisMesh Gateway Setup Guide](./WisMesh-Gateway-Setup-Guide.md) guide, which covers the setup of a Ethernet or WiFi connection to a MQTT broker to forward sensor data, device location and other information to the Cloud.
 
 ----
 
@@ -235,7 +235,7 @@ We are using the Chrome browser and the hosted version of the Web Client in the 
 ----
 
 #### Open the Web Client
-In the Chrome browser, open _**`https://client.meshtastic.org/`**_ to start the Web Client. In the start screen it will show that no devices are connected.
+In the Chrome browser, open [_**`https://client.meshtastic.org/`**_](https://client.meshtastic.org/) to start the Web Client. In the start screen it will show that no devices are connected.
 
 <center><img src="./assets_qsg/20-webclient-start.png" alt="Web Client starting" height="25%" ></center> 
 
