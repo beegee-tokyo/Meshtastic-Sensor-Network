@@ -59,7 +59,7 @@ If DHCP has been choosen, a network scanner app can help to find the IP address 
 
 ## Setup a RAK11200 (ESP32) module as WiFi MQTT gateway
 
-Once the RAK4631 is setup as a Meshtastic Node and has joined the network, there are only two steps required to forward data from the Meshtastic Network to an MQTT Broker.
+Once the RAK11200 is setup as a Meshtastic Node and has joined the network, there are only two steps required to forward data from the Meshtastic Network to an MQTT Broker.
 
 ----
 
