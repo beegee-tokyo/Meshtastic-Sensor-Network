@@ -93,6 +93,9 @@ _**If you configure the device for a WiFi network that you cannot access from yo
 
 The Raspberry RP2040 MCU on the RAK11310 does not have WiFi nor BLE connectivity. The only way to setup the device is through the Web Client.    
 
+# ⚠️ WARNING
+_**At the time of publishing this guide, the default Meshtastic firmware did not support the RAK13800. A merge request to [Add Ethernet RAk13800 support to RAk11310](https://github.com/meshtastic/firmware/pull/5707) was issued.**_    
+
 ----
 
 ### Connect the device over USB to your computer
